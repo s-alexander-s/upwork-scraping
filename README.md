@@ -32,5 +32,5 @@ Since I am agency freelancer I am using as a parameter for the scraper.
 ### page_limit
 UpWork limit the page number at 500 although there maybe more freelancers. But if you don't want to scrape so many pages you can use `page_limit` parameter.
 
-## Ouput
+### Ouput
 In addition to determining your place in the search results scraper also saves some data about all scraped freelancers in the output file. Here it is `telegram_bot.json`.
