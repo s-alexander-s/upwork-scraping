@@ -5,7 +5,7 @@ Project aimed to provide set of utilities to scrape some useful information from
 It's a simle scraper that helps you to determine your place (rank) in (UpWork freelancers search)[https://www.upwork.com/o/profiles/browse/] in terms of particular query. Here is an example of how to check the rank of my agency on UpWork ([blue underlined link](https://www.upwork.com/companies/~0140676ee0e4006401)):
 
 ```
-> scrapy runspider -a profile_id="~0140676ee0e4006401" -a query="telegram bot" -a page_limit=10 -o freelancer.json my_rank_for_query.py
+> scrapy runspider -a profile_id="~0140676ee0e4006401" -a query="telegram bot" -a page_limit=10 -o telegram_bot.json my_rank_for_query.py
 2018-10-23 19:45:55 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: scrapybot)
 ...
 2018-10-23 19:45:58 [scrapy.core.engine] INFO: Spider closed (Your profile rank is 26. You are at page 3: https://www.upwork.com/o/profiles/browse/?q=telegram+bot&page=3)
@@ -27,7 +27,10 @@ Since I am agency freelancer I am using as a parameter for the scraper.
 ![Agency link](/images/agency_link.png)
 
 ### query
-`query` is a search query what you want to check.
+`query` is a search query what you want to check, `telegram bot` e.g.
 
 ### page_limit
-UpWork limit the page number at 500 although there are maybe more freelancers. But if you don't want to scrape so many pages you can use `page_limit` parameter.
+UpWork limit the page number at 500 although there maybe more freelancers. But if you don't want to scrape so many pages you can use `page_limit` parameter.
+
+## Ouput
+In addition to determining your place in the search results scraper also saves some data about all scraped freelancers in the output file. Here it is `telegram_bot.json`.
