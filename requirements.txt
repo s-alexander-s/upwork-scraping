@@ -1,2 +1,2 @@
-scrapy
-pypiwin32
+scrapy==1.5.1
+pypiwin32==223
