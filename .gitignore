@@ -53,3 +53,4 @@ fabric.properties
 __pycache__/
 venv/
 *.cmd
+output/
