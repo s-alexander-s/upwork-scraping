@@ -19,12 +19,12 @@ You should use your agency `profile_id` if your are agency freelancer otherwise 
 
 #### Personal link
 Here is my personal profile: https://www.upwork.com/freelancers/~01b101e9259c8483ee  
-![Personal link](/personal_link.png)
+![Personal link](/images/personal_link.png)
 
 #### Agency link
 Here is my agency profile: https://www.upwork.com/companies/~0140676ee0e4006401  
 Since I am agency freelancer I am using as a parameter for the scraper.  
-![Agency link](/agency_link.png)
+![Agency link](/images/agency_link.png)
 
 ### query
 `query` is a search query what you want to check.
