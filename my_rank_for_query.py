@@ -11,6 +11,7 @@ class UpWorkQuerySpider(scrapy.Spider):
         'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
                       'AppleWebKit/537.36 (KHTML, like Gecko) '
                       'Chrome/69.0.3497.100 Safari/537.36',
+        'CONCURRENT_ITEMS': 1
     }
 
     URL = 'https://www.upwork.com/o/profiles/browse/?{params}'
@@ -41,7 +42,8 @@ class UpWorkQuerySpider(scrapy.Spider):
                 'profile_link': profile_link,
                 'page': page,
                 'rank': rank,
-                'page_link': response.url
+                'page_link': response.url,
+                'data': freelancer.css('::attr(data-ng-click)').extract_first()
             }
             if self.profile_id in profile_link:
                 raise CloseSpider(f'Your profile rank is {rank}. You are at page {page}: {response.url}')
