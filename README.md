@@ -1,6 +1,24 @@
 # upwork-scraping
 Project aimed to provide set of utilities to scrape some useful information from UpWork. I develop it according to my personal need but if you have an idea feel free to create an issue.
 
+## full_data_parser.ipynb
+It's a ipython notebook with some data analysis. I am planning to add more analysis here, but at this point correlation analysis was made:
+
+```
+data.combinedTotalEarnings            0.015510
+data.combinedTotalRevenue             0.016040
+data.hourlyRate.amount               -0.418419
+data.nss100                          -0.622634
+data.recno                            0.262488
+data.totalFpJobs                     -0.209804
+data.totalHourlyJobs                 -0.363204
+data.totalHoursBilled                -0.297878
+data.totalPassedTests                -0.291060
+data.totalPortfolioItems             -0.055847
+page                                  0.999421
+rank                                  1.000000
+```
+
 ## my_rank_for_query.py
 It's a simle scraper that helps you to determine your place (rank) in [UpWork freelancers search](https://www.upwork.com/o/profiles/browse/) in terms of particular query. Here is an example of how to check the rank of my agency on UpWork ([blue underlined link](https://www.upwork.com/companies/~0140676ee0e4006401)):
 
