@@ -22,7 +22,7 @@ As you can see your earnings (`data.combinedTotalEarnings` and `data.combinedTot
 
 UpWork values fixed-price jobs (`data.totalFpJobs`)  more than hourly-paid jobs (`data.totalHourlyJobs`). And the number of your hourly-paid jobs (`data.totalHourlyJobs`) is more imortant than how many hours you worked (`data.totalHoursBilled`).
 
-The surprise to me that the number of tests passed (`data.totalPassedTests`) is as important as your hours billed (`data.totalHoursBilled`). But when the correlation coefficient module is so small we cannot be sure enough. Nevertheless I am go to try to pass more tests.
+The surprise to me that the number of tests passed (`data.totalPassedTests`) is as important as your hours billed (`data.totalHoursBilled`). But when the correlation coefficient module is so small we cannot be sure enough. Nevertheless I am going to try to pass more tests.
 
 Your hourly rate (`data.hourlyRate.amount`) also has a big correlation but it is a consequence of your rank not a reason (I hope). It is fun to notice that your id (`data.recno`) also matters, but I believe in the least. 
 
