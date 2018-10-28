@@ -24,7 +24,16 @@ UpWork values fixed-price jobs (`data.totalFpJobs`)  more than hourly-paid jobs 
 
 The surprise to me that the number of tests passed (`data.totalPassedTests`) is as important as your hours billed (`data.totalHoursBilled`). But when the correlation coefficient module is so small we cannot be sure enough. Nevertheless I am going to try to pass more tests.
 
-Your hourly rate (`data.hourlyRate.amount`) also has a big correlation but it is a consequence of your rank not a reason (I hope). It is fun to notice that your id (`data.recno`) also matters, but I believe in the least. 
+Your hourly rate (`data.hourlyRate.amount`) also has a big correlation but it is a consequence of your rank not a reason (I hope). It is fun to notice that your id (`data.recno`) also matters, but I believe in the least.
+
+### Visualisation
+There are scatter plots and histograms for all columns correlation of rank was calculated with. Here is the example of scatter plot (rank is on Y axis and your success score (`data.nss100 `) is on X axis):
+
+![Success score scatter plot](/images/success_score_scatter.png)
+
+Here is the histogram of the number of passed tests:
+
+![Passed tests histogram](/images/passed_tests_hist.png)
 
 ## my_rank_for_query.py
 It's a simle scraper that helps you to determine your place (rank) in [UpWork freelancers search](https://www.upwork.com/o/profiles/browse/) in terms of particular query. Here is an example of how to check the rank of my agency on UpWork ([blue underlined link](https://www.upwork.com/companies/~0140676ee0e4006401)):
