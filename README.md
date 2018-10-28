@@ -1,6 +1,31 @@
 # upwork-scraping
 Project aimed to provide set of utilities to scrape some useful information from UpWork. I develop it according to my personal need but if you have an idea feel free to create an issue.
 
+## full_data_parser.ipynb
+It's a ipython notebook with some data analysis. I am planning to add more analysis here, but at this point correlation analysis was made (the bigger the absolute value of the coefficient the better):
+
+```
+data.combinedTotalEarnings            0.015510
+data.combinedTotalRevenue             0.016040
+data.hourlyRate.amount               -0.418419
+data.nss100                          -0.622634
+data.recno                            0.262488
+data.totalFpJobs                     -0.209804
+data.totalHourlyJobs                 -0.363204
+data.totalHoursBilled                -0.297878
+data.totalPassedTests                -0.291060
+data.totalPortfolioItems             -0.055847
+page                                  0.999421
+rank                                  1.000000
+```
+As you can see your earnings (`data.combinedTotalEarnings` and `data.combinedTotalRevenue`) and number of items in your protfolio (`data.totalPortfolioItems`) do not affect your rank a lot. Your success score (`data.nss100`) is the most valuable parameter in terms of your rank.
+
+UpWork values fixed-price jobs (`data.totalFpJobs`)  more than hourly-paid jobs (`data.totalHourlyJobs`). And the number of your hourly-paid jobs (`data.totalHourlyJobs`) is more imortant than how many hours you worked (`data.totalHoursBilled`).
+
+The surprise to me that the number of tests passed (`data.totalPassedTests`) is as important as your hours billed (`data.totalHoursBilled`). But when the correlation coefficient module is so small we cannot be sure enough. Nevertheless I am going to try to pass more tests.
+
+Your hourly rate (`data.hourlyRate.amount`) also has a big correlation but it is a consequence of your rank not a reason (I hope). It is fun to notice that your id (`data.recno`) also matters, but I believe in the least. 
+
 ## my_rank_for_query.py
 It's a simle scraper that helps you to determine your place (rank) in [UpWork freelancers search](https://www.upwork.com/o/profiles/browse/) in terms of particular query. Here is an example of how to check the rank of my agency on UpWork ([blue underlined link](https://www.upwork.com/companies/~0140676ee0e4006401)):
 
@@ -23,14 +48,14 @@ Here is my personal profile: https://www.upwork.com/freelancers/~01b101e9259c848
 
 #### Agency link
 Here is my agency profile: https://www.upwork.com/companies/~0140676ee0e4006401  
-Since I am agency freelancer I am using as a parameter for the scraper.  
+Since I am an agency freelancer I am using it as a parameter for the scraper.  
 ![Agency link](/images/agency_link.png)
 
 ### query
 `query` is a search query what you want to check, `telegram bot` e.g.
 
 ### page_limit
-UpWork limit the page number at 500 although there maybe more freelancers. But if you don't want to scrape so many pages you can use `page_limit` parameter.
+UpWork limits the page number at 500 although there maybe more freelancers. But if you don't want to scrape so many pages you can use `page_limit` parameter.
 
 ### Ouput
 In addition to determining your place in the search results scraper also saves some data about all scraped freelancers in the output file. Here it is `telegram_bot.json`.
